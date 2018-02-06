@@ -1,4 +1,7 @@
-1. COPY
+
+-
+1 - COPY FILES
+-
 
 1.1 Description - Make new directory and COPY files to your /mnt/scratch/${USER}/${DIR}
 
@@ -24,9 +27,10 @@ cp copy.sh /mnt/scratch/${USER}/${DIR}/
 
 cd /mnt/scratch/${USER}/${DIR}/
 
-------------------------------
+```
+-
 Comments
------------------------------
+-
 In the next lines, the first for loop allows you to see the data you capture before you submit a the qsub using the variable list!!! 
 
 qdel all
@@ -38,13 +42,12 @@ grep -v = do not print lines that match pattern. I used (grep -v trim) becasue t
 echo = print lines
 qsub -v = submit variable to qsub File= $i = ${File} in copy.sh
 
+
 ```
-
-
 for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);do echo $i;done
 
 for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);do qsub -v File=$i copy.sh;done
-
+```
 
 
 ######################

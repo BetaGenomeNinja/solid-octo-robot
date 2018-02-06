@@ -10,7 +10,7 @@ ${USER} == your scratch space
 ${DIR} == A folder where all results for this experiment will be stored
 
 ```javascript
-scripts used = copy.sh
+scripts used = copy.qsub
 ```
 
 1.2 CMDS
@@ -23,7 +23,7 @@ mkdir /mnt/scratch/${USER}/${DIR}
 
 cd /mnt/research/beet/raw_reads/genomes/admera/Paul_Scripts/
 
-cp copy.sh /mnt/scratch/${USER}/${DIR}/	
+cp copy.qsub /mnt/scratch/${USER}/${DIR}/	
 
 cd /mnt/scratch/${USER}/${DIR}/
 
@@ -47,7 +47,7 @@ qsub -v = submit variable to qsub File= $i = ${File} in copy.sh
 ```
 for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);do echo $i;done
 
-for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);do qsub -v File=$i copy.sh;done
+for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);do qsub -v File=$i copy.qsub;done
 ```
 
 -

@@ -37,8 +37,9 @@ qdel all
 
 This cmd will delete all of your jobs from the queue, when not if, you screw up... 
 
-for loops = capture data in list $(cat,ls,awk,ect...)
-grep -v = do not print lines that match pattern. I used (grep -v trim) becasue there were files I did not want, I filtered with grep. 
+for loops = capture data in a list $(cat,ls,awk,ect...) Better examples and explainations are found searching bash for loops.
+grep -v = do not print lines that match pattern. 
+I used (grep -v trim) becasue there were files I did not want, I filtered with grep. 
 echo = print lines
 qsub -v = submit variable to qsub File= $i = ${File} in copy.sh
 

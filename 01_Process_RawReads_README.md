@@ -10,9 +10,6 @@ scripts used = copy.sh
 ######################
 1.2 CMDS
 
-```javascript
-// Your code here
-```
 cd /mnt/scratch/${USER}
 
 mkdir /mnt/scratch/${USER}/${DIR}

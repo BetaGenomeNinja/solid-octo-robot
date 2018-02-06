@@ -8,7 +8,7 @@ these to the read info.
 
 ATGC
 
-+
+'+'
 
 FFFF
 
@@ -16,7 +16,7 @@ FFFF
 
 ATGC
 
-+
+'+'
 
 FFFF
 

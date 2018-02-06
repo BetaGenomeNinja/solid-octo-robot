@@ -2,14 +2,19 @@
 
 1.1 Description
 
-Make new directory and COPY files to your /mnt/scratch/${USER}/${DIR} 
+Make new directory and COPY files to your /mnt/scratch/${USER}/${DIR}
+
 ${USER} == your scratch space
+
 ${DIR} == A folder where all results for this experiment will be stored
+
 ```javascript
 scripts used = copy.sh
 ```
-######################
+
 1.2 CMDS
+
+```javascript
 
 cd /mnt/scratch/${USER}
 
@@ -35,7 +40,8 @@ grep -v = do not print lines that match pattern. I used (grep -v trim) becasue t
 echo = print lines
 qsub -v = submit variable to qsub File= $i = ${File} in copy.sh
 
-------------------------------
+```
+
 
 for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);do echo $i;done
 

@@ -55,9 +55,9 @@ for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);d
 -
 2.1 Description - Program to process fastq for Quality,Adapters,Paired and Unpaired
 
-Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina Sequence Data. Bioinformatics, btu170.
+Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina Sequence Data. Bioinformatics, btu170.http://www.usadellab.org/cms/?page=trimmomatic
 
-http://www.usadellab.org/cms/?page=trimmomatic
+
 
 ```
 scripts used = trim.LARGE.qsub

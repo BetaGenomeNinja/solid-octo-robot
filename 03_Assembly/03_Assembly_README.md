@@ -5,13 +5,19 @@ File input for Abyss wants reads marked with /1 and /2 for R1 and R2 in paired e
 these to the read info.
 
 @info.info -info-info_info
+
 ATGC
+
 +
+
 FFFF
 
 @info.info -info-info_info/1
+
 ATGC
+
 +
+
 FFFF
 
 

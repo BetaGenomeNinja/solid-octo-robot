@@ -1,7 +1,7 @@
 # 01_Process_RawReads_README.md
+1 - COPY FILES 
 -
-1 - COPY FILES
--
+
 
 1.1 Description - Make new directory and COPY files to your /mnt/scratch/${USER}/${DIR}
 

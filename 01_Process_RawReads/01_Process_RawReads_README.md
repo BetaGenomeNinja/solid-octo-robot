@@ -49,7 +49,6 @@ for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);d
 for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);do qsub -v File=$i copy.sh;done
 ```
 
-
 -
 2 - Trimmomatic
 -

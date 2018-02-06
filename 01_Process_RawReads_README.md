@@ -1,4 +1,3 @@
-
 -
 1 - COPY FILES
 -
@@ -28,10 +27,10 @@ cp copy.sh /mnt/scratch/${USER}/${DIR}/
 cd /mnt/scratch/${USER}/${DIR}/
 
 ```
--
-Comments
--
-In the next lines, the first for loop allows you to see the data you capture before you submit a the qsub using the variable list!!! 
+
+Comments:
+
+In the next lines of bash code, the first for loop allows you to see the data you capture before you submit a the qsub using the variable list!!! 
 
 qdel all
 
@@ -50,19 +49,23 @@ for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);d
 ```
 
 
-######################
-2.Trimmomatic
-###################### 
-2.1 Description
+-
+2 - Trimmomatic
+-
+2.1 Description - Program to process fastq for Quality,Adapters,Paired and Unpaired
 
 Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina Sequence Data. Bioinformatics, btu170.
+
 http://www.usadellab.org/cms/?page=trimmomatic
 
-Program to process fastq for Quality,Adapters,Paired and Unpaired
-
+```
 scripts used = trim.LARGE.qsub
-#######################
 
+```
+
+2.2 CMDS
+
+```
 cd /mnt/scratch/galewski/CROP/CT_EL_SR_PAT_genomes
 
 for i in $(ls *.gz);do echo $i;done
@@ -74,3 +77,9 @@ for i in $(ls *.gz | awk -F'_R' '{print $1}');do echo $i;done | uniq > tmp; for 
 for i in $(ls *.gz | awk -F'_R' '{print $1}');do echo $i;done | uniq > tmp; for i in $(cat tmp);do qsub -v File=$i trim.LARGE.qsub;done;rm tmp
 
 for i in $(ls *se* | awk -F'_R' '{print $1}');do echo $i;done | uniq > tmp; for i in $(cat tmp);do cat $i'_R1_se.fastq' $i'_R2_se.fastq' > $i'_se.fastq'; done
+
+```
+
+
+
+

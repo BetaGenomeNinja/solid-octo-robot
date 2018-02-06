@@ -3,7 +3,7 @@
 -
 
 
-1.1 Description - Make new directory and COPY files to your /mnt/scratch/${USER}/${DIR}
+*1.1 Description - Make new directory and COPY files to your /mnt/scratch/${USER}/${DIR}
 
 ${USER} == your scratch space
 
@@ -13,7 +13,7 @@ ${DIR} == A folder where all results for this experiment will be stored
 scripts used = copy.sh
 ```
 
-1.2 CMDS
+*1.2 CMDS
 
 ```javascript
 
@@ -50,10 +50,10 @@ for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);d
 ```
 
 
---
+-
 2 - Trimmomatic
 -
-2.1 Description - Program to process fastq for Quality,Adapters,Paired and Unpaired
+*2.1 Description - Program to process fastq for Quality,Adapters,Paired and Unpaired
 
 Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina Sequence Data. Bioinformatics, btu170.http://www.usadellab.org/cms/?page=trimmomatic
 
@@ -64,7 +64,7 @@ scripts used = trim.LARGE.qsub
 
 ```
 
-2.2 CMDS
+*2.2 CMDS
 
 ```
 cd /mnt/scratch/galewski/CROP/CT_EL_SR_PAT_genomes

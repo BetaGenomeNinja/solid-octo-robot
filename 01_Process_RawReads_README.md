@@ -50,7 +50,7 @@ for i in $(ls /mnt/research/beet/raw_reads/genomes/admera/*.gz | grep -v trim);d
 ```
 
 
--
+--
 2 - Trimmomatic
 -
 2.1 Description - Program to process fastq for Quality,Adapters,Paired and Unpaired

@@ -1,8 +1,6 @@
 1. COPY
 
-1.1 Description
-
-Make new directory and COPY files to your /mnt/scratch/${USER}/${DIR}
+1.1 Description - Make new directory and COPY files to your /mnt/scratch/${USER}/${DIR}
 
 ${USER} == your scratch space
 

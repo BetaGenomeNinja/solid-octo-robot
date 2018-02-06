@@ -1,0 +1,15 @@
+#!/bin/bash -login
+
+#PBS -N trim.out.sh
+#PBS -A mitchmcg -l mem=32gb
+#PBS -l nodes=1:ppn=2
+#PBS -l walltime=3:00:00 -j oe
+
+module load Trimmomatic
+
+cd $PBS_O_WORKDIR
+
+java -jar $TRIM/trimmomatic PE ${File}_R1_001.fastq.gz ${File}_R2_001.fastq.gz ${File}_R1_pe.fastq ${File}_R1_se.fastq ${File}_R2_pe.fastq ${File}_R2_se.fastq ILLUMINACLIP:/mnt/scratch/galewski/CROP/CT_EL_SR_PAT_genomes/admera_adapters.fa:2:30:10 LEADING:3 TRAILING:3 SLIDINGWINDOW:4:15 MINLEN:36
+
+##README##
+#qsub -v File1=XXXX,File2=YYYY trim.qsub

@@ -1,5 +1,24 @@
-asdfasdf
-  
 
-  
-asdfasdf
+
+##Prep Files for Abyss####
+File input for Abyss wants reads marked with /1 and /2 for R1 and R2 in paired end format. The script (fastq_fasta_payl.py) attaches 
+these to the read info.
+
+@info.info -info-info_info
+ATGC
++
+FFFF
+
+@info.info -info-info_info/1
+ATGC
++
+FFFF
+
+
+
+for i in $(ls *R1*pe* | sed 's/.fastq//g' );do qsub -v File=$i,Num=1 fastq_fasta.sh;done
+for i in $(ls *R2*pe* | sed 's/.fastq//g' );do qsub -v File=$i,Num=2 fastq_fasta.sh;done
+
+
+
+

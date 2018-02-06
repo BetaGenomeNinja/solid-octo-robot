@@ -61,7 +61,6 @@ Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer f
 
 ```
 scripts used = trim.LARGE.qsub
-
 ```
 
 2.2 CMDS

@@ -23,9 +23,11 @@ for i in $(ls *R* | grep -v AB);do rm $i;done
 
 for i in $(ls *R2* | awk -F'_L001' '{print $1}');do mkdir $i;mv $i*AB* $i/;done
 
-DID NOT WORK
 
+DID NOT WORK!!!!!!
 for i in $(ls | grep 17);do cat Crop.Abyss.qsub | sed "s/BBTB/$i/g" > $i/$i'.qsub';done
 for i in $(ls | grep 17);do cd $i/;qsub $i.qsub;cd ..;done
+DID NOT WORK!!!!!!
+
 ```
 

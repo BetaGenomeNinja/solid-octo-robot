@@ -10,7 +10,6 @@ scripts used = Crop.Abyss.qsub
 fastq_fasta.sh
 fastq_fasta_payl.py
 ```
-
 -
 1.2 CMDS
 -

@@ -5,6 +5,12 @@ Prep Files for Abyss
 -
 Creats submittion scripts for abyss assemblies. Optional file manipulation may be required but is dependant on how the read IDs are formatted. Trimmomatic will sort, order and remove unpaired reads.
 
+```
+scripts used = Crop.Abyss.qsub
+fastq_fasta.sh
+fastq_fasta_payl.py
+```
+
 -
 1.2 CMDS
 -
@@ -16,9 +22,9 @@ cd $USER/$DIR/
 
 mkdir ASSEMBLY
 
-for i in $(ls *R2* | awk -F'_L001' '{print $1}');do mkdir $i;done
+for i in $(ls *R2* | awk -F'_L001' '{print $1}');do mkdir $PATH/ASSEMBLY/$i;done
 
-for i in $(ls | grep 17);do mv ../fastq/*$i*pe* $i/ ;done
+for i in $(ls | grep 17);do mv ../fastq/*$i*pe* $PATH/ASSEMBLY/$i/ ;done
 
 for i in $(ls | grep 17);do cd $i/;qsub $i.qsub;cd ..;done
 
